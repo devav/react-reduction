@@ -60,7 +60,7 @@ class CardPage extends React.Component {
     modal_backdrop: false,
     modal_nested_parent: false,
     modal_nested: false,
-    backdrop: true,
+    backdrop: false,
   };
 
   toggle = modalType => () => {
