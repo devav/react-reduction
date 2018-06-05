@@ -58,6 +58,7 @@ class CardPage extends React.Component {
   state = {
     modal: false,
     modal_backdrop: false,
+    modal_form: false,
     modal_nested_parent: false,
     modal_nested: false,
     backdrop: true,
@@ -97,10 +98,10 @@ class CardPage extends React.Component {
                 Place Bid
               </Button>
               <Modal
-                isOpen={this.state.modal_backdrop}
-                toggle={this.toggle('backdrop')}
-                backdrop={this.state.backdrop}>
-                <ModalHeader toggle={this.toggle('backdrop')}>
+                isOpen={this.state.modal_form}
+                toggle={this.toggle('form')}
+                backdrop={this.state.modal_form}>
+                <ModalHeader toggle={this.toggle('form')}>
                   North Carolina Tar Heels at Cal Bears Football <span style={{ color: '#00b5b5', fontSize: '16px'}}>(Sat, Sep 01, 2018)</span>
                 </ModalHeader>
                 <ModalBody>
@@ -181,7 +182,7 @@ class CardPage extends React.Component {
               <Button color="info" outline className="mr-1">
                 Highest Price <Badge color="info">$760</Badge>
               </Button>
-              <Button onClick={this.toggle('backdrop')} color="secondary" className="mr-1" style={{ float:'right'}}>
+              <Button onClick={this.toggle('form')} color="secondary" className="mr-1" style={{ float:'right'}}>
                 Place Bid
               </Button>
             </CardBody>
