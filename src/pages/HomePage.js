@@ -37,6 +37,7 @@ import { UserCard } from 'components/Card';
 import { SampleMap } from '../components/SampleMap';
 import { BidingDetails } from '../components/BidingDetails';
 import { WrapperCard } from '../components/WrapperCard';
+import { EventCard } from '../components/EventCard';
 
 import bg1Image from 'assets/img/bg/background_640-1.jpg';
 import bg3Image from 'assets/img/bg/background_640-3.jpg';
@@ -81,112 +82,86 @@ class CardPage extends React.Component {
     <Page title="Cards" breadcrumbs={[{ name: 'cards', active: true }]} style={{marginTop: '80px'}}>
       <Row>
         <Col md={6} sm={6} xs={12} className="mb-3">
-          <Card>
-            <CardImg top src={eventImg1} />
-            <CardBody>
-              <CardTitle>North Carolina Tar Heels at Cal Bears Football <span style={{ color: '#00b5b5', fontSize: '16px'}}>(Sat, Sep 01, 2018)</span></CardTitle>
-              <CardText>
-                <span style={{fontSize: '13px', color: 'gray'}}>California Memorial Stadium, Berkeley, CA, US</span>
-              </CardText>
-              <Button color="primary" outline className="mr-1">
-                Lowest Price <Badge color="primary">$120</Badge>
-              </Button>&nbsp;&nbsp;&nbsp;
-              <Button color="info" outline className="mr-1">
-                Highest Price <Badge color="info">$230</Badge>
-              </Button>
-                <Button onClick={this.toggle('backdrop')} color="secondary" className="mr-1" style={{ float:'right'}}>
-                Place Bid
-              </Button>
-              <Modal
-                isOpen={this.state.modal_form}
-                toggle={this.toggle('form')}
-                backdrop={this.state.modal_form}>
-                <ModalHeader toggle={this.toggle('form')}>
-                  North Carolina Tar Heels at Cal Bears Football <span style={{ color: '#00b5b5', fontSize: '16px'}}>(Sat, Sep 01, 2018)</span>
-                </ModalHeader>
-                <ModalBody>
-                <Form className="col-sm-6">
-                  <FormGroup row>
-                    <Label for="exampleEmail" sm={4}>
-                      Bid per Ticket ($)
-                    </Label>
-                    <Col sm={8}>
-                      <Input
-                        type="email"
-                        name="email"
-                        placeholder="Enter Amount per Ticket"
-                      />
-                    </Col>
-                  </FormGroup>
-                  <FormGroup row>
-                    <Label for="exampleSelect" sm={4}>
-                      No.Of Tickets
-                    </Label>
-                    <Col sm={8}>
-                      <Input type="select" name="select">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>4</option>
-                        <option>6</option>
-                        <option>8</option>
-                        <option>8</option>
-                    </Input>
-                    </Col>
-                  </FormGroup>
-                  <FormGroup row>
-                    <Label for="exampleSelect" sm={4}>
-                      Bid Expires on
-                    </Label>
-                    <Col sm={8}>
-                      <Input type="select" name="select">
-                        <option>Event Date</option>
-                        <option>1 DAY</option>
-                        <option>2 DAYS</option>
-                        <option>4 DAYS</option>
-                        <option>6 DAYS</option>
-                        <option>10 DAYS</option>
-                    </Input>
-                    </Col>
-                  </FormGroup>
-                  <FormGroup row>
-                    <Label for="exampleText" sm={4}>
-                      Additional Notes
-                    </Label>
-                    <Col sm={8}>
-                      <Input type="textarea" name="text" />
-                    </Col>
-                  </FormGroup>
-                  <FormGroup check row>
-                    <Col sm={{ size: 10, offset: 9 }}>
-                      <Button>Place Bid</Button>
-                    </Col>
-                  </FormGroup>
-                </Form>
-                </ModalBody>
-              </Modal>
-            </CardBody>
-          </Card>
+          <EventCard
+            image={eventImg1}
+            title="North Carolina Tar Heels at Cal Bears Football"
+            date="Sat, Sep 01, 2018"
+            location="California Memorial Stadium, Berkeley, CA, US"
+            lowPrice="120"
+            highPrice="230"
+            modalTitle="North Carolina Tar Heels at Cal Bears Football"
+          >
+            <Form className="col-sm-6">
+              <FormGroup row>
+                <Label for="exampleEmail" sm={4}>
+                  Bid per Ticket ($)
+                </Label>
+                <Col sm={8}>
+                  <Input
+                    type="email"
+                    name="email"
+                    placeholder="Enter Amount per Ticket"
+                  />
+                </Col>
+              </FormGroup>
+              <FormGroup row>
+                <Label for="exampleSelect" sm={4}>
+                  No.Of Tickets
+                </Label>
+                <Col sm={8}>
+                  <Input type="select" name="select">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>4</option>
+                    <option>6</option>
+                    <option>8</option>
+                    <option>8</option>
+                </Input>
+                </Col>
+              </FormGroup>
+              <FormGroup row>
+                <Label for="exampleSelect" sm={4}>
+                  Bid Expires on
+                </Label>
+                <Col sm={8}>
+                  <Input type="select" name="select">
+                    <option>Event Date</option>
+                    <option>1 DAY</option>
+                    <option>2 DAYS</option>
+                    <option>4 DAYS</option>
+                    <option>6 DAYS</option>
+                    <option>10 DAYS</option>
+                </Input>
+                </Col>
+              </FormGroup>
+              <FormGroup row>
+                <Label for="exampleText" sm={4}>
+                  Additional Notes
+                </Label>
+                <Col sm={8}>
+                  <Input type="textarea" name="text" />
+                </Col>
+              </FormGroup>
+              <FormGroup check row>
+                <Col sm={{ size: 10, offset: 9 }}>
+                  <Button>Place Bid</Button>
+                </Col>
+              </FormGroup>
+            </Form>
+          </EventCard>
         </Col>
 
         <Col md={6} sm={6} xs={12} className="mb-3">
-          <Card>
-            <CardImg top src={eventImg2} />
-            <CardBody>
-              <CardTitle>Stockton Ports at San Jose Giants <span style={{ color: '#00b5b5', fontSize: '16px'}}>(Fri, Jun 08, 2018)</span></CardTitle>
-              <CardText>
-                <span style={{fontSize: '13px', color: 'gray'}}>San Jose Municipal Stadium, San Jose, CA, US</span>
-              </CardText>
-              <Button color="primary" outline className="mr-1">
-                Lowest Price <Badge color="primary">$550</Badge>
-              </Button>&nbsp;&nbsp;&nbsp;
-              <Button color="info" outline className="mr-1">
-                Highest Price <Badge color="info">$760</Badge>
-              </Button>
-              <Button onClick={this.toggle('form')} color="secondary" className="mr-1" style={{ float:'right'}}>
-                Place Bid
-              </Button>
-            </CardBody>
-          </Card>
+          <EventCard
+            image={eventImg2}
+            title="Stockton Ports at San Jose Giants"
+            date="Fri, Jun 08, 2018"
+            location="San Jose Municipal Stadium, San Jose, CA, US"
+            lowPrice="550"
+            highPrice="760"
+            modalTitle="Stockton Ports at San Jose Giants"
+            >
+          </EventCard>
         </Col>
       </Row>
       <Row>
