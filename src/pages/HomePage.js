@@ -133,34 +133,34 @@ class CardPage extends React.Component {
             </Form>
           </EventCard>
         </Col>
-
-        <Col md={6} sm={6} xs={12} className="mb-3">
-          <EventCard
-            image={eventImg3}
-            title="Green Bay Packers at Oakland Raiders  Preseason Tickets"
-            date="Mon, Jun 11, 2018"
-            location="Oakland Coliseum, CA, US"
-            lowPrice="190"
-            highPrice="330"
-            modalTitle="Green Bay Packers at Oakland Raiders  Preseason Tickets"
-            >
-          </EventCard>
-        </Col>
+          <Col md={6} sm={6} xs={12} className="mb-3">
+            <EventCard
+              image={eventImg2}
+              title="Stockton Ports at San Jose Giants"
+              date="Fri, Jun 08, 2018"
+              location="San Jose Municipal Stadium, San Jose, CA, US"
+              lowPrice="550"
+              highPrice="760"
+              modalTitle="Stockton Ports at San Jose Giants"
+              >
+            </EventCard>
+          </Col>
       </Row>
       <Row>
-        <Col md={6} sm={6} xs={12} className="mb-3">
-          <EventCard
-            image={eventImg2}
-            title="Stockton Ports at San Jose Giants"
-            date="Fri, Jun 08, 2018"
-            location="San Jose Municipal Stadium, San Jose, CA, US"
-            lowPrice="550"
-            highPrice="760"
-            modalTitle="Stockton Ports at San Jose Giants"
-            >
-          </EventCard>
-        </Col>
-        <Col md={6} sm={6} xs={12} className="mb-3">
+
+      <Col md={8} sm={8} xs={12} className="mb-3">
+        <EventCard
+          image={eventImg3}
+          title="Green Bay Packers at Oakland Raiders  Preseason Tickets"
+          date="Mon, Jun 11, 2018"
+          location="Oakland Coliseum, CA, US"
+          lowPrice="190"
+          highPrice="330"
+          modalTitle="Green Bay Packers at Oakland Raiders  Preseason Tickets"
+          >
+        </EventCard>
+      </Col>
+        <Col md={4} sm={4} xs={12} className="mb-3">
           <EventCard
             image={eventImg4}
             title="Kesha and Macklemore"
@@ -174,7 +174,20 @@ class CardPage extends React.Component {
         </Col>
       </Row>
       <Row>
-        <Col md={6} sm={6} xs={12} className="mb-3">
+        <Col md={5} sm={5} xs={12} className="mb-3">
+        <EventCard
+          image={eventImg6}
+          title="Beyoncé & Jay-Z Tickets"
+          date="Thu, Jun 14, 2018"
+          location="Levis Stadium, Santa Clara, CA, US"
+          lowPrice="110"
+          highPrice="440"
+          modalTitle="Beyoncé & Jay-Z Tickets"
+          >
+        </EventCard>
+        </Col>
+
+        <Col md={7} sm={7} xs={12} className="mb-3">
           <EventCard
             image={eventImg5}
             title="LAFC  at San Jose Earthquakes"
@@ -186,43 +199,30 @@ class CardPage extends React.Component {
             >
           </EventCard>
         </Col>
-
-        <Col md={6} sm={6} xs={12} className="mb-3">
-          <EventCard
-            image={eventImg6}
-            title="Beyoncé & Jay-Z Tickets"
-            date="Thu, Jun 14, 2018"
-            location="Levis Stadium, Santa Clara, CA, US"
-            lowPrice="110"
-            highPrice="440"
-            modalTitle="Beyoncé & Jay-Z Tickets"
-            >
-          </EventCard>
-        </Col>
       </Row>
       <Row>
 
       <Col md={7} sm={7} xs={12} className="mb-3">
-        <EventCard
-          image={eventImg7}
-          title="San Francisco 49ers Packages"
-          date="Fri, Jun 22, 2018"
-          location="Memorabilia San Francisco, Santa Clara, California, US"
-          lowPrice="200"
-          highPrice="940"
-          modalTitle="San Francisco 49ers Packages"
-          >
-        </EventCard>
+      <EventCard
+        image={eventImg8}
+        title="5 Seconds of Summer"
+        date="Tue, Jul 17, 2018"
+        location="Event Center at San Jose State University, San Jose, CA, US"
+        lowPrice="100"
+        highPrice="560"
+        modalTitle="5 Seconds of Summer"
+        >
+      </EventCard>
       </Col>
         <Col md={5} sm={5} xs={12} className="mb-3">
           <EventCard
-            image={eventImg8}
-            title="5 Seconds of Summer"
-            date="Tue, Jul 17, 2018"
-            location="Event Center at San Jose State University, San Jose, CA, US"
-            lowPrice="100"
-            highPrice="560"
-            modalTitle="5 Seconds of Summer"
+            image={eventImg7}
+            title="San Francisco 49ers Packages"
+            date="Fri, Jun 22, 2018"
+            location="Memorabilia San Francisco, Santa Clara, California, US"
+            lowPrice="200"
+            highPrice="940"
+            modalTitle="San Francisco 49ers Packages"
             >
           </EventCard>
         </Col>
