@@ -13,14 +13,15 @@
   border:dashed 3px #ccc;
 }
 
-.separator2 {
-  border:solid 3px #ccc;
-}
+
 
 .listing-summary > div {
   width: 50%;
   box-sizing: border-box;
   display:inline-block;
+  float: left;
+  position: relative;
+  margin-bottom:10px;
 }
 
 .listing-summary .titles {
@@ -34,4 +35,28 @@
 
 .total-cont {
   text-align: right;
+}
+
+.bidclick {
+  animation: bidoption .4s;
+}
+
+
+@keyframes bidoption {
+  0% {
+    opacity: 1;
+    font-weight: bold;
+  }
+
+  50% {
+    opacity:.4;
+    transform:rotateX(-1deg);
+
+  }
+
+  100% {
+    opacity: 1;
+    transform:rotateX(0);
+    font-weight: bold;
+  }
 }

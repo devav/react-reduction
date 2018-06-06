@@ -17,10 +17,10 @@ export class WrapperCard extends Component {
   render() {
     return (
       <Row>
-        <Col md={9}>
+        <Col md={8}>
           <SampleMap  clickHandler={ this.setData.bind(this) }/>
         </Col>
-        <Col md={3}>
+        <Col md={4}>
           <BidingDetails price={this.state.price} available={this.state.available} />
         </Col>
       </Row>

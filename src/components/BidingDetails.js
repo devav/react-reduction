@@ -5,10 +5,29 @@ import './bidding.css';
 const boxStyle = {
   border: '1px solid rgba(0, 0, 0, 0.125)',
   padding: 20,
-  fontSize: 14
-}
+  fontSize: 14,
+  position: 'sticky',
+  top: 10
+};
 
 export class BidingDetails extends Component {
+  state = {
+    clsanimation: ''
+  }
+
+  componentWillReceiveProps() {
+      console.log('changed');
+      this.setState({
+        clsanimation:''
+      });
+      setTimeout(()=> {
+        this.setState({
+          clsanimation:'bidclick'
+        });
+      }, 100);
+
+  }
+
   render() {
     return (
       <div style={boxStyle}>
@@ -41,16 +60,14 @@ export class BidingDetails extends Component {
               <div className="qty-container">
                 <div className="titles qty-text">NUMBER OF TICKETS</div>
                 <div className="ticket-qty">
-                  <span className="qty">{this.props.available} tickets</span>
+                  <span className={this.state.clsanimation}>{this.props.available} tickets</span>
                 </div>
               </div>
               <div className="total-cont">
                 <div className="titles ticket-price">TICKET PRICE</div>
-                <div className="amount">{ this.props.price }</div>
-                <div className="each">each</div>
+                <div className={this.state.clsanimation}>${ this.props.price } each</div>
               </div>
             </div>
-            <div className="separator-2"></div>
             <Input className="mb-2" placeholder="Enter your bid" />
             <Button color="secondary" size="sm" block>
               Place Bid

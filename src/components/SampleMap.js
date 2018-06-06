@@ -33,7 +33,7 @@ export class SampleMap extends Component {
   }
 
   render() {
-      const svg = `<svg height="523" version="1.1" width="523" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.5px;" viewBox="0 0 4096 4096" preserveAspectRatio="xMinYMin">
+      const svg = `<svg height="auto" version="1.1" width="70%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.5px;" viewBox="0 0 4096 4096" preserveAspectRatio="xMinYMin">
     <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.4</desc>
     <defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs>
     <image x="0" y="0" width="4096" height="4096" preserveAspectRatio="none" xlink:href=${spritebg} style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" stroke-width="1"></image>
@@ -320,7 +320,7 @@ export class SampleMap extends Component {
     <path fill="none" stroke="#000000" d="M0,0H4096V4096H0V0Z" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;" stroke-width="1"></path>
 </svg>`;
     return (
-      <div style={{ position:'relative', cursor: 'pointer', textAlign:'center' }}>
+      <div style={{ position:'relative', cursor: 'pointer', textAlign:'center', borderTop:'dashed 1px #ccc', borderRight:'dashed 1px #ccc' }}>
       <SampleMapHover top={this.state.hoverTop} left={this.state.hoverLeft} visible={this.state.hoverVisible} price={this.state.price} available={this.state.available} />
       <div dangerouslySetInnerHTML={{__html: svg}} onMouseOver={ this.hover.bind(this) } onClick={this.click.bind(this) }>
 
