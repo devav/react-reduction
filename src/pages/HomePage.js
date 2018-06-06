@@ -56,26 +56,9 @@ import footballfieldsvg from 'assets/img/football-st.svg';
 
 //const CardPage = () => {
 class CardPage extends React.Component {
-  state = {
-    modal: false,
-    modal_backdrop: false,
-    modal_form: false,
-    modal_nested_parent: false,
-    modal_nested: false,
-    backdrop: false,
-  };
 
-  toggle = modalType => () => {
-    if (!modalType) {
-      return this.setState({
-        modal: !this.state.modal,
-      });
-    }
 
-    this.setState({
-      [`modal_${modalType}`]: !this.state[`modal_${modalType}`],
-    });
-  };
+
 
   render() {
   return (
@@ -166,159 +149,83 @@ class CardPage extends React.Component {
       </Row>
       <Row>
         <Col md={6} sm={6} xs={12} className="mb-3">
-          <Card className="flex-row">
-            <CardImg
-              className="card-img-left"
-              src={eventImg3}
-              style={{ width: '250px', height: 225 }}
-            />
-            <CardBody>
-              <CardTitle><span style={{ fontSize: '18px'}}>Big 3 Basketball Tournament</span> <span style={{ color: '#00b5b5', fontSize: '14px'}}>(Mon, Jun 11, 2018)</span></CardTitle>
-              <CardText>
-                <span style={{fontSize: '13px', color: 'gray'}}>Oracle Arena, Oakland, CA, US</span>
-              </CardText>
+          <EventCard
+            image={eventImg3}
+            title="Big 3 Basketball Tournament"
+            date="Mon, Jun 11, 2018"
+            location="Oracle Arena, Oakland, CA, US"
+            lowPrice="190"
+            highPrice="330"
+            modalTitle="Big 3 Basketball Tournament"
+            >
+          </EventCard>
 
-              <div style={{ paddingTop:'70px'}}>
-              <Button color="primary" outline className="mr-1" size="sm">
-                Lowest Price <Badge color="primary">$190</Badge>
-              </Button>&nbsp;&nbsp;&nbsp;
-              <Button color="info" outline className="mr-1" size="sm">
-                Highest Price <Badge color="info">$330</Badge>
-              </Button>
-              <Button color="secondary" className="mr-1" size="sm" style={{ float:'right'}}>
-                Place Bid
-              </Button>
-              </div>
-              <Modal
-                isOpen={this.state.modal_backdrop}
-                toggle={this.toggle('backdrop')}
-                backdrop={this.state.backdrop}>
-                <ModalHeader toggle={this.toggle('backdrop')}>
-                  North Carolina Tar Heels at Cal Bears Football <span style={{ color: '#00b5b5', fontSize: '16px'}}>(Sat, Sep 01, 2018)</span>
-                </ModalHeader>
-                <ModalBody>
-                  <WrapperCard />
-                </ModalBody>
-              </Modal>
-            </CardBody>
-          </Card>
+        </Col>
+        <Col md={6} sm={6} xs={12} className="mb-3">
+          <EventCard
+            image={eventImg4}
+            title="Kesha and Macklemore"
+            date="Thu, Jun 14, 2018"
+            location="Shoreline Amphitheatre, Mountain View, CA, US"
+            lowPrice="420"
+            highPrice="630"
+            modalTitle="Kesha and Macklemore"
+            >
+          </EventCard>
+        </Col>
+      </Row>
+      <Row>
+        <Col md={6} sm={6} xs={12} className="mb-3">
+          <EventCard
+            image={eventImg5}
+            title="LAFC  at San Jose Earthquakes"
+            date="Sat, Jun 09, 2018"
+            location="Avaya Stadium, San Jose, CA, US"
+            lowPrice="320"
+            highPrice="999"
+            modalTitle="LAFC  at San Jose Earthquakes"
+            >
+          </EventCard>
         </Col>
 
         <Col md={6} sm={6} xs={12} className="mb-3">
-          <Card className="flex-row">
-            <CardBody>
-            <CardTitle><span style={{ fontSize: '18px'}}>Kesha and Macklemore</span> <span style={{ color: '#00b5b5', fontSize: '14px'}}>(Thu, Jun 14, 2018)</span></CardTitle>
-            <CardText>
-              <span style={{fontSize: '13px', color: 'gray'}}>Shoreline Amphitheatre, Mountain View, CA, US</span>
-            </CardText>
-            <div style={{ paddingTop:'70px'}}>
-            <Button color="primary" outline className="mr-1" size="sm">
-              Lowest Price <Badge color="primary">$420</Badge>
-            </Button>&nbsp;&nbsp;&nbsp;
-            <Button color="info" outline className="mr-1" size="sm">
-              Highest Price <Badge color="info">$630</Badge>
-            </Button>
-            <Button color="secondary" className="mr-1" size="sm" style={{ float:'right'}}>
-              Place Bid
-            </Button>
-            </div>
-            </CardBody>
-            <CardImg
-              className="card-img-right"
-              src={eventImg4}
-              style={{ width: '250px', height: 225 }}
-            />
-          </Card>
-        </Col>
-      </Row>
-      <Row>
-        <Col md={8} sm={8} xs={12} className="mb-3">
-          <Card>
-            <CardImg top src={eventImg5} />
-            <CardBody>
-              <CardTitle>LAFC  at San Jose Earthquakes <span style={{ color: '#00b5b5', fontSize: '16px'}}>(Sat, Jun 09, 2018)</span></CardTitle>
-              <CardText>
-                <span style={{fontSize: '13px', color: 'gray'}}>Avaya Stadium, San Jose, CA, US</span>
-              </CardText>
-              <Button color="primary" outline className="mr-1">
-                Lowest Price <Badge color="primary">$320</Badge>
-              </Button>&nbsp;&nbsp;&nbsp;
-              <Button color="info" outline className="mr-1">
-                Highest Price <Badge color="info">$999</Badge>
-              </Button>
-              <Button color="secondary" className="mr-1" style={{ float:'right'}}>
-                Place Bid
-              </Button>
-            </CardBody>
-          </Card>
-        </Col>
-
-        <Col md={4} sm={4} xs={12} className="mb-3">
-          <Card>
-            <CardImg top src={eventImg6} />
-            <CardBody>
-              <CardTitle><span style={{ fontSize: '18px'}}>Beyoncé & Jay-Z Tickets</span> <span style={{ color: '#00b5b5', fontSize: '14px'}}>(Thu, Jun 14, 2018)</span></CardTitle>
-                <CardText>
-                <span style={{fontSize: '13px', color: 'gray'}}>Levis Stadium, Santa Clara, CA, US</span>
-              </CardText>
-              <div style={{ paddingTop:'7px'}}>
-              <Button color="primary" outline className="mr-1"  size="sm">
-                Lowest Price <Badge color="primary">$110</Badge>
-              </Button>&nbsp;&nbsp;&nbsp;
-              <Button color="info" outline className="mr-1"  size="sm">
-                Highest Price <Badge color="info">$440</Badge>
-              </Button>
-              <Button color="secondary" className="mr-1"  size="sm" style={{ float:'right'}}>
-                Place Bid
-              </Button>
-              </div>
-            </CardBody>
-          </Card>
+          <EventCard
+            image={eventImg6}
+            title="Beyoncé & Jay-Z Tickets"
+            date="Thu, Jun 14, 2018"
+            location="Levis Stadium, Santa Clara, CA, US"
+            lowPrice="110"
+            highPrice="440"
+            modalTitle="Beyoncé & Jay-Z Tickets"
+            >
+          </EventCard>
         </Col>
       </Row>
       <Row>
 
-      <Col md={4} sm={4} xs={12} className="mb-3">
-        <Card>
-          <CardImg top src={eventImg7} />
-          <CardBody>
-          <CardTitle><span style={{ fontSize: '18px'}}>San Francisco 49ers Packages</span> <span style={{ color: '#00b5b5', fontSize: '14px'}}>(Fri, Jun 22, 2018)</span></CardTitle>
-            <CardText>
-              <span style={{fontSize: '13px', color: 'gray'}}>Memorabilia San Francisco, Santa Clara, California, US</span>
-            </CardText>
-            <div style={{ paddingTop:'7px'}}>
-            <Button color="primary" outline className="mr-1"  size="sm">
-              Lowest Price <Badge color="primary">$200</Badge>
-            </Button>&nbsp;&nbsp;&nbsp;
-            <Button color="info" outline className="mr-1"  size="sm">
-              Highest Price <Badge color="info">$940</Badge>
-            </Button>
-            <Button color="secondary" className="mr-1"  size="sm" style={{ float:'right'}}>
-              Place Bid
-            </Button>
-            </div>
-          </CardBody>
-        </Card>
+      <Col md={6} sm={6} xs={12} className="mb-3">
+        <EventCard
+          image={eventImg7}
+          title="San Francisco 49ers Packages"
+          date="Fri, Jun 22, 2018"
+          location="Memorabilia San Francisco, Santa Clara, California, US"
+          lowPrice="200"
+          highPrice="940"
+          modalTitle="San Francisco 49ers Packages"
+          >
+        </EventCard>
       </Col>
-        <Col md={8} sm={8} xs={12} className="mb-3">
-          <Card>
-            <CardImg top src={eventImg8} />
-            <CardBody>
-              <CardTitle>5 Seconds of Summer <span style={{ color: '#00b5b5', fontSize: '16px'}}>(Tue, Jul 17, 2018)</span></CardTitle>
-              <CardText>
-                <span style={{fontSize: '13px', color: 'gray'}}>Event Center at San Jose State University, San Jose, CA, US</span>
-              </CardText>
-              <Button color="primary" outline className="mr-1">
-                Lowest Price <Badge color="primary">$100</Badge>
-              </Button>&nbsp;&nbsp;&nbsp;
-              <Button color="info" outline className="mr-1">
-                Highest Price <Badge color="info">$560</Badge>
-              </Button>
-              <Button color="secondary" className="mr-1" style={{ float:'right'}}>
-                Place Bid
-              </Button>
-            </CardBody>
-          </Card>
+        <Col md={6} sm={6} xs={12} className="mb-3">
+          <EventCard
+            image={eventImg8}
+            title="5 Seconds of Summer"
+            date="Tue, Jul 17, 2018"
+            location="Event Center at San Jose State University, San Jose, CA, US"
+            lowPrice="100"
+            highPrice="560"
+            modalTitle="5 Seconds of Summer"
+            >
+          </EventCard>
         </Col>
       </Row>
     </Page>

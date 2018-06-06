@@ -28,18 +28,14 @@ export class EventCard extends Component {
   render() {
     const modalChildren = this.props.children ? this.props.children : <WrapperCard />;
     return (
-      <Card className="flex-row">
-        <CardImg
-          className="card-img-left"
-          src={this.props.image}
-          style={{ width: this.props.width || 250 , height: this.props.height || 225 }}
-        />
+      <Card className="flex-col">
+        <div className="img-fluid" style={{ backgroundImage:`url('${this.props.image}')`, backgroundPosition:'top center', height:270 }}></div>
         <CardBody>
           <CardTitle><span style={{ fontSize: '18px'}}>{ this.props.title }</span> <span style={{ color: '#00b5b5', fontSize: '14px'}}>({this.props.date})</span></CardTitle>
           <CardText>
             <span style={{fontSize: '13px', color: 'gray'}}>{this.props.location}</span>
           </CardText>
-          <div style={{ paddingTop:'70px'}}>
+          <div style={{ marginTop:'10px'}}>
           <Button color="primary" outline className="mr-1" size="sm">
             Lowest Price <Badge color="primary">${ this.props.lowPrice }</Badge>
           </Button>&nbsp;&nbsp;&nbsp;
