@@ -100,7 +100,7 @@ class CardPage extends React.Component {
               <Modal
                 isOpen={this.state.modal_form}
                 toggle={this.toggle('form')}
-                backdrop={this.state.modal_form}>
+                backdrop={this.state.backdrop}>
                 <ModalHeader toggle={this.toggle('form')}>
                   North Carolina Tar Heels at Cal Bears Football <span style={{ color: '#00b5b5', fontSize: '16px'}}>(Sat, Sep 01, 2018)</span>
                 </ModalHeader>
