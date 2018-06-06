@@ -29,7 +29,7 @@ export class EventCard extends Component {
     const modalChildren = this.props.children ? this.props.children : <WrapperCard />;
     return (
       <Card className="hover-effect flex-col">
-        <div className="img-fluid" style={{ backgroundImage:`url('${this.props.image}')`, backgroundPosition:'top center', height:270 }}></div>
+        <div className="img-fluid" style={{ backgroundImage:`url('${this.props.image}')`, backgroundPosition:'top center', height:270, backgroundRepeat:'no-repeat', backgroundColor:'#000' }}></div>
         <CardBody>
           <CardTitle><span style={{ fontSize: '18px'}}>{ this.props.title }</span> <span style={{ color: '#00b5b5', fontSize: '14px'}}>({this.props.date})</span></CardTitle>
           <CardText>

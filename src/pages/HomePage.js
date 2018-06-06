@@ -46,7 +46,7 @@ import bg18Image from 'assets/img/bg/background_1920-18.jpg';
 import user1Image from 'assets/img/users/100_1.jpg';
 import eventImg1 from 'assets/img/event/football.jpg';
 import eventImg2 from 'assets/img/event/baseball.jpg';
-import eventImg3 from 'assets/img/event/basketball.jpg';
+import eventImg3 from 'assets/img/event/raiders1.jpg';
 import eventImg4 from 'assets/img/event/kesha.jpg';
 import eventImg5 from 'assets/img/event/eimg5.jpg';
 import eventImg6 from 'assets/img/event/eimg6.jpg';
@@ -136,6 +136,20 @@ class CardPage extends React.Component {
 
         <Col md={6} sm={6} xs={12} className="mb-3">
           <EventCard
+            image={eventImg3}
+            title="Green Bay Packers at Oakland Raiders  Preseason Tickets"
+            date="Mon, Jun 11, 2018"
+            location="Oakland Coliseum, CA, US"
+            lowPrice="190"
+            highPrice="330"
+            modalTitle="Green Bay Packers at Oakland Raiders  Preseason Tickets"
+            >
+          </EventCard>
+        </Col>
+      </Row>
+      <Row>
+        <Col md={6} sm={6} xs={12} className="mb-3">
+          <EventCard
             image={eventImg2}
             title="Stockton Ports at San Jose Giants"
             date="Fri, Jun 08, 2018"
@@ -145,21 +159,6 @@ class CardPage extends React.Component {
             modalTitle="Stockton Ports at San Jose Giants"
             >
           </EventCard>
-        </Col>
-      </Row>
-      <Row>
-        <Col md={6} sm={6} xs={12} className="mb-3">
-          <EventCard
-            image={eventImg3}
-            title="Big 3 Basketball Tournament"
-            date="Mon, Jun 11, 2018"
-            location="Oracle Arena, Oakland, CA, US"
-            lowPrice="190"
-            highPrice="330"
-            modalTitle="Big 3 Basketball Tournament"
-            >
-          </EventCard>
-
         </Col>
         <Col md={6} sm={6} xs={12} className="mb-3">
           <EventCard
@@ -203,7 +202,7 @@ class CardPage extends React.Component {
       </Row>
       <Row>
 
-      <Col md={6} sm={6} xs={12} className="mb-3">
+      <Col md={7} sm={7} xs={12} className="mb-3">
         <EventCard
           image={eventImg7}
           title="San Francisco 49ers Packages"
@@ -215,7 +214,7 @@ class CardPage extends React.Component {
           >
         </EventCard>
       </Col>
-        <Col md={6} sm={6} xs={12} className="mb-3">
+        <Col md={5} sm={5} xs={12} className="mb-3">
           <EventCard
             image={eventImg8}
             title="5 Seconds of Summer"
