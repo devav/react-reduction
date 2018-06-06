@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardBody, CardTitle, CardText, Button, Badge, Modal, ModalHeader, ModalBody  } from 'reactstrap';
 import { WrapperCard } from '../WrapperCard';
-
+import './style.css';
 export class EventCard extends Component {
 
   state = {
@@ -28,7 +28,7 @@ export class EventCard extends Component {
   render() {
     const modalChildren = this.props.children ? this.props.children : <WrapperCard />;
     return (
-      <Card className="flex-col">
+      <Card className="hover-effect flex-col">
         <div className="img-fluid" style={{ backgroundImage:`url('${this.props.image}')`, backgroundPosition:'top center', height:270 }}></div>
         <CardBody>
           <CardTitle><span style={{ fontSize: '18px'}}>{ this.props.title }</span> <span style={{ color: '#00b5b5', fontSize: '14px'}}>({this.props.date})</span></CardTitle>
